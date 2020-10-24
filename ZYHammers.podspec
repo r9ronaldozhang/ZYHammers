@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint ZYHammers.podspec.podspec' to ensure this is a
+#  Be sure to run `pod spec lint ZYHammers.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
@@ -16,9 +16,10 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZYHammers"
-  spec.version      = "0.0.4"
+  spec.version      = "0.0.5"
   spec.summary      = "老张的一个很好用的锤子箱子."
-
+  spec.swift_version = "5.0"
+  
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
@@ -68,7 +69,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "10.0"
 
   #  When using multiple platforms
-  # spec.ios.deployment_target = "5.0"
+  spec.ios.deployment_target = "10.0"
   # spec.osx.deployment_target = "10.0"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
@@ -91,7 +92,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "ZYHammers/Classes/**/*.{h,m,swift}"
+  spec.source_files  = "Classes", "ZYHammers/Classes/*.swift"
   # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
@@ -118,7 +119,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.framework  = "SomeFramework"
-  spec.frameworks = "UIKit"
+  spec.frameworks = "UIKit", "AVFoundation", "Photos"
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
