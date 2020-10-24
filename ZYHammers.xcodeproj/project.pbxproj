@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29597AAA254402C800019618 /* ZYProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29597AA9254402C800019618 /* ZYProtocols.swift */; };
+		29597AAD254407A900019618 /* ZYGlobel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29597AAC254407A900019618 /* ZYGlobel.swift */; };
 		2A8340542543144A00B75AE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8340532543144A00B75AE6 /* AppDelegate.swift */; };
 		2A8340562543144A00B75AE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8340552543144A00B75AE6 /* SceneDelegate.swift */; };
 		2A8340582543144A00B75AE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8340572543144A00B75AE6 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29597AA9254402C800019618 /* ZYProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYProtocols.swift; sourceTree = "<group>"; };
+		29597AAC254407A900019618 /* ZYGlobel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYGlobel.swift; sourceTree = "<group>"; };
 		2A8340502543144A00B75AE6 /* ZYHammers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYHammers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8340532543144A00B75AE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A8340552543144A00B75AE6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				2A83406C254318DE00B75AE6 /* ZYStructs.swift */,
+				29597AA9254402C800019618 /* ZYProtocols.swift */,
+				29597AAC254407A900019618 /* ZYGlobel.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -149,7 +155,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A8340582543144A00B75AE6 /* ViewController.swift in Sources */,
+				29597AAD254407A900019618 /* ZYGlobel.swift in Sources */,
 				2A83406D254318DF00B75AE6 /* ZYStructs.swift in Sources */,
+				29597AAA254402C800019618 /* ZYProtocols.swift in Sources */,
 				2A8340542543144A00B75AE6 /* AppDelegate.swift in Sources */,
 				2A8340562543144A00B75AE6 /* SceneDelegate.swift in Sources */,
 			);
@@ -301,6 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ATK5A97N9D;
 				INFOPLIST_FILE = ZYHammers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,6 +329,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ATK5A97N9D;
 				INFOPLIST_FILE = ZYHammers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,9 +1,12 @@
 //
-//  ZYStructs.swift
-//  遇到swift
+//  [ZYHammers] 第一个锤子.  Struct
 //
-//  Created by 张宇 on 2019/2/28.
-//  Copyright © 2019 张宇. All rights reserved.
+//  ZYStructs.swift
+//  这是一些老张常用的的功用工具，分享出来大家一起使用，喜欢的可以star
+//  本人不会天天都登录github，有建议，或者发现了bug可以邮件我 183146978@qq.com
+//
+//  Created by 张宇 on 2020/10/24.
+//  Copyright © 2020 张宇. All rights reserved.
 //
 
 import UIKit
@@ -11,7 +14,9 @@ import AVFoundation
 import Photos
 
 public struct ZYError : LocalizedError {
+    
     public var desc = ""
+    
     public var errorDescription: String? {
         return desc
     }
@@ -226,13 +231,14 @@ public struct ZYRandom {
 }
 
 // MARK: - 系统权限相关
-struct ZYSystemAuth {
+public struct ZYSystemAuth {
+    
     // MARK: - 相机权限
     
     /**
      *  当前是否有使用相机权限
      */
-    static func cameraAuthorized() -> Bool {
+    public static func cameraAuthorized() -> Bool {
         /**
             case notDetermined      // 第一次申请(未知状态)
             case restricted               // 已经拒绝 不能修改的状态，可能是家长控制权限
@@ -249,16 +255,15 @@ struct ZYSystemAuth {
     /**
      * 获取当前相机授权的枚举状态
      */
-    static func cameraAuthStatus() -> AVAuthorizationStatus {
+    public static func cameraAuthStatus() -> AVAuthorizationStatus {
         return AVCaptureDevice.authorizationStatus(for: .video)
     }
     
     /**
      *  主动申请相机权限
      */
-    static func requestCamera(completion : @escaping(_ isSuccess : Bool) -> ()) {
+    public static func requestCamera(completion : @escaping(_ isSuccess : Bool) -> ()) {
         AVCaptureDevice.requestAccess(for: .video) { (success) in
-            print("ZYSystemAuth: - 申请了相机权限 申请结果: \(success)")
             DispatchQueue.main.async {
                 completion(success)
             }
@@ -268,7 +273,7 @@ struct ZYSystemAuth {
     /**
      *  当前是否有使用相机权限
      */
-    static func micphoneAuthorized() -> Bool {
+    public static func micphoneAuthorized() -> Bool {
         /**
             case notDetermined      // 第一次申请(未知状态)
             case restricted               // 已经拒绝 不能修改的状态，可能是家长控制权限
@@ -285,16 +290,15 @@ struct ZYSystemAuth {
     /**
      * 获取当前麦克风授权的枚举状态
      */
-    static func micphoneAuthStatus() -> AVAuthorizationStatus {
+    public static func micphoneAuthStatus() -> AVAuthorizationStatus {
         return AVCaptureDevice.authorizationStatus(for: .audio)
     }
     
     /**
      *  主动申请麦克风权限
      */
-    static func requestMicphone(completion : @escaping(_ isSuccess : Bool) -> ()) {
+    public static func requestMicphone(completion : @escaping(_ isSuccess : Bool) -> ()) {
         AVCaptureDevice.requestAccess(for: .audio) { (success) in
-            print("ZYSystemAuth: - 申请了麦克风权限 申请结果: \(success)")
             DispatchQueue.main.async {
                 completion(success)
             }
@@ -304,7 +308,7 @@ struct ZYSystemAuth {
     /**
      * 获取当前相册的使用权限
      */
-    static func albumAuthorized() -> Bool {
+    public static func albumAuthorized() -> Bool {
         let status = PHPhotoLibrary.authorizationStatus()
         if status == .authorized {
             return true
@@ -313,7 +317,7 @@ struct ZYSystemAuth {
     }
     
     /** 申请相册权限 */
-    static func requestAlbum(completion: @escaping(_ isSuccess : Bool) -> ()) {
+    public static func requestAlbum(completion: @escaping(_ isSuccess : Bool) -> ()) {
         let status = PHPhotoLibrary.authorizationStatus()
         if status == .notDetermined {   // 第一次触发提示
             PHPhotoLibrary.requestAuthorization { (st) in
@@ -330,16 +334,16 @@ struct ZYSystemAuth {
     
 }
 
-struct ZYDefaults {
+public struct ZYDefaults {
     
     /** 归档Any类型到本地 */
-    static func save(_ obj : Any, forKey key : String) {
+    public static func save(_ obj : Any, forKey key : String) {
         UserDefaults.standard.set(obj, forKey: key)
         UserDefaults.standard.synchronize()
     }
     
     /** 获取defaults中的String类型数据 如果没有获取到，返回"" */
-    static func string(forKey key : String) -> String {
+    public static func string(forKey key : String) -> String {
         if let value = UserDefaults.standard.string(forKey: key) {
             return value
         }
@@ -347,18 +351,18 @@ struct ZYDefaults {
     }
     
     /** 获取defaults中的Int类型数据，如果没有获取到，返回0 */
-    static func int(forKey key : String) -> Int {
+    public static func int(forKey key : String) -> Int {
         let value = UserDefaults.standard.integer(forKey: key)
         return value
     }
     
     /** 获取defaults中的Bool值 */
-    static func bool(forKey key : String) -> Bool {
+    public static func bool(forKey key : String) -> Bool {
         return UserDefaults.standard.bool(forKey: key)
     }
     
     /** 获取defaults中的字典 如果没有获取到，返回空字典 */
-    static func dict(forKey key : String) -> [String : Any]? {
+    public static func dict(forKey key : String) -> [String : Any]? {
         if let dict = UserDefaults.standard.dictionary(forKey: key) {
             return dict
         }
@@ -366,7 +370,7 @@ struct ZYDefaults {
     }
     
     /** 获取数组，如果没有，返回空数组 */
-    static func array(forKey key : String) -> [Any] {
+    public static func array(forKey key : String) -> [Any] {
         if let arr = UserDefaults.standard.array(forKey: key) {
             return arr
         }
@@ -374,7 +378,7 @@ struct ZYDefaults {
     }
     
     /** 获取字典数组,如果没有，返回空数组 */
-    static func dictArray(forKey key : String) -> [[String : Any]] {
+    public static func dictArray(forKey key : String) -> [[String : Any]] {
         if let obj = UserDefaults.standard.object(forKey: key) {
             if let dictArr = obj as? [[String : Any]] {
                 return dictArr
@@ -386,15 +390,15 @@ struct ZYDefaults {
     /// 删除归档
     ///
     /// - Parameter key: key description
-    static func remove(_ key: String) {
+    public static func remove(_ key: String) {
         UserDefaults.standard.removeObject(forKey: key)
         UserDefaults.standard.synchronize()
     }
 }
 
-struct ZYPredicate {
+public struct ZYPredicate {
     /** 判断是否是合法电话号码 */
-    static func checkPhoneNumber(number : String?) -> Bool {
+    public static func checkPhoneNumber(number : String?) -> Bool {
         if number == nil {
             return false
         }
@@ -404,14 +408,14 @@ struct ZYPredicate {
     }
     
     /** 正则是否是合法身份证号 */
-    static func checkUserIdCard(idCard : String) -> Bool {
+    public static func checkUserIdCard(idCard : String) -> Bool {
         let regex = "^(\\d{14}|\\d{17})(\\d|[xX])$"
         let cardPredicate = NSPredicate(format: "SELF MATCHES %@", regex)
         return cardPredicate.evaluate(with : idCard)
     }
     
     /** 正则4-6位数短信验证码 */
-    static func checkSecurityCode(code: String?) -> Bool {
+    public static func checkSecurityCode(code: String?) -> Bool {
         if code == nil {
             return false
         }
@@ -424,7 +428,7 @@ struct ZYPredicate {
     }
     
     /** 正则是否是纯数字 */
-    static func checkNumber(string : String?) -> Bool {
+    public static func checkNumber(string : String?) -> Bool {
         if string == nil { return false }
         let regex = "^[0-9]{\(string!.count)}"
         let numPredicate = NSPredicate(format: "SELF MATCHES %@", regex)
@@ -432,7 +436,7 @@ struct ZYPredicate {
     }
     
     /** 正则6-20位密码（密码位数的限制） */
-    static func checkPassword(pwd : String?) -> Bool {
+    public static func checkPassword(pwd : String?) -> Bool {
         if pwd == nil { return false}
         let regex = "^.{8,20}"
         let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
@@ -440,14 +444,14 @@ struct ZYPredicate {
     }
     
     /** 正则是否是合法的邮箱 */
-    static func checkEmail(email : String) -> Bool {
+    public static func checkEmail(email : String) -> Bool {
         let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
         let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
         return predicate.evaluate(with:email)
     }
     
     /** 正则是否是合法中文名称 */
-    static func checkChineseName(name : String?) -> Bool {
+    public static func checkChineseName(name : String?) -> Bool {
         if name == nil { return false }
         let regex = "^[\u{4e00}-\u{9fa5}]{2,5}$"
         let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
@@ -455,28 +459,28 @@ struct ZYPredicate {
     }
     
     /** 正则是否是合法邮编 */
-    static func checkPostCode(code : String) -> Bool {
+    public static func checkPostCode(code : String) -> Bool {
         let regex = "^[0-9]{6}"
         let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
         return predicate.evaluate(with:code)
     }
     
     /** 正则4位数图片验证码 */
-    static func checkPicCode(code : String) -> Bool {
+    public static func checkPicCode(code : String) -> Bool {
         let regex = "^[A-Z0-9a-z]{4}"
         let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
         return predicate.evaluate(with:code)
     }
     
     /** 正则日期格式是否合法 */
-    static func checkDateFormat(dateStr : String) -> Bool {
+    public static func checkDateFormat(dateStr : String) -> Bool {
         let regex = "^(?:(?!0000)[0-9]{4}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[0-9]{2}(?:0[48]|[2468][048]|[13579][26])|(?:0[48]|[2468][048]|[13579][26])00)-02-29)$"
         let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
         return predicate.evaluate(with:dateStr)
     }
 }
 
-struct ZYSysAuth {
+public struct ZYSysAuth {
     
     /**用户权限检测的类型*/
     public enum CheckStyle {
@@ -496,12 +500,8 @@ struct ZYSysAuth {
         case authorized     = 3
     }
     
-//    static func checkAuth(style : CheckStyle) -> Status {
-//
-//    }
-    
     /**获取App是否获取用户相机权限*/
-    static func cameraAuth() -> Status {
+    public static func cameraAuth() -> Status {
         let status = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
         if let auth = Status(rawValue: status.rawValue) {
             return auth
@@ -510,7 +510,7 @@ struct ZYSysAuth {
     }
 
     /**获取App是否获取用户相册权限*/
-    static func photosAuth() -> Status {
+    public static func photosAuth() -> Status {
         let status = PHPhotoLibrary.authorizationStatus()
         if let auth = Status(rawValue: status.rawValue) {
             return auth
