@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZYHammers"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   spec.summary      = "老张的一个很好用的锤子箱子."
 
   # This description is used to generate tags and improve search results.

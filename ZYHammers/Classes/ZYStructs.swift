@@ -10,9 +10,9 @@ import UIKit
 import AVFoundation
 import Photos
 
-struct ZYError : LocalizedError {
-    var desc = ""
-    var errorDescription: String? {
+public struct ZYError : LocalizedError {
+    public var desc = ""
+    public var errorDescription: String? {
         return desc
     }
     
@@ -21,20 +21,20 @@ struct ZYError : LocalizedError {
     }
 }
 
-struct ZYDate {
+public struct ZYDate {
     
     /** 当前的时间戳(since1970 单位是秒) */
-    static var nowTimestampS : Int {
+    public static var nowTimestampS : Int {
         return Int(Date().timeIntervalSince1970)
     }
     
     /** 当前的时间戳(since1970 单位是毫秒) */
-    static var nowTimestampMS : Int {
+    public static var nowTimestampMS : Int {
         return Int(Date().timeIntervalSince1970 * 1000)
     }
     
     /** 将一个时间戳 格式化为 HH : mm 或者 几分钟钱 几小时前等*/
-    static func formatTimestamp(_ timestamp : Int) -> String {
+    public static func formatTimestamp(_ timestamp : Int) -> String {
         let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
         let nowDate = Date()
         let interval = nowDate.timeIntervalSince(date)      // 计算时间差
@@ -75,7 +75,7 @@ struct ZYDate {
     ///
     /// - Parameter second: second
     /// - Returns: HH:mm:ss
-    static func secondToHours(_ second: Int) -> String {
+    public static func secondToHours(_ second: Int) -> String {
         //小时
         let str_hours = String(format: "%02ld", second / 3600)
         //分
@@ -90,28 +90,28 @@ struct ZYDate {
     
 }
 
-struct ZYSystemInfo {
+public struct ZYSystemInfo {
     
     /** 获取APP版本号 */
-    static func AppVersion() -> String {
+    public static func AppVersion() -> String {
         let dict = Bundle.main.infoDictionary!
         return dict["CFBundleShortVersionString"] as! String
     }
     
     /** 获取系统的build号 */
-    static func AppBuildVersion() -> String {
+    public static func AppBuildVersion() -> String {
         let dict = Bundle.main.infoDictionary!
         return dict["CFBundleVersion"] as! String
     }
     
     /** 获取系统BundleID */
-    static func AppBunldID() -> String {
+    public static func AppBunldID() -> String {
         let dict = Bundle.main.infoDictionary!
         return dict["CFBundleIdentifier"] as! String
     }
     
     /** 手机型号*/
-    static func AppDeviceModel() -> String {
+    public static func AppDeviceModel() -> String {
         var deviceInfo = utsname()
         uname(&deviceInfo)
         let platform = withUnsafePointer(to: &deviceInfo.machine.0) { ptr in
@@ -201,25 +201,25 @@ struct ZYSystemInfo {
     }
     
     /** 手机系统版本号 */
-    static func AppDeviceVersion() -> String {
+    public static func AppDeviceVersion() -> String {
         return UIDevice.current.systemVersion
     }
     
     /** 手机UUID */
-    static func DeviceUUID() -> String {
+    public static func DeviceUUID() -> String {
         return UIDevice.current.identifierForVendor!.uuidString
     }
 }
 
-struct ZYRandom {
+public struct ZYRandom {
     
     /** 随机生成一个UUID String */
-    static var UUIDString : String {
+    public static var UUIDString : String {
         return NSUUID().uuidString
     }
     
     /// 随机生成一个Int数
-    static var IntNum : Int {
+    public static var IntNum : Int {
         return Int(arc4random())
     }
     
