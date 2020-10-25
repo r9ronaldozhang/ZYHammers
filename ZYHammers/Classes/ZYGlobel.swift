@@ -20,65 +20,6 @@ public let zyBounds = CGRect(x: 0, y: 0, width: zyScreenW, height: zyScreenH)
 /** 获取除去标准导航高度的bounds */
 public let zyNavBounds = CGRect(x: 0, y: 0, width: zyScreenW, height: zyInchGT58 ? 88 : 64)
 
-// MARK: - 系统常用颜色(声明为变量，初始化后供自行定义)
-
-/** 系统主题色 */
-public var zyColorTheme = zyColorRGB(242, 249, 236)
-
-/** 系统红色 */
-public var zyColorRed = zyColorRGB(245, 108, 108)
-
-/** 系统蓝色 */
-public var zyColorBlue = zyColorRGB(89, 157, 248)
-
-/** 边框颜色(跟随主题系统) */
-public var zyColorBorder1 = zyColorRGB(201, 230, 181)
-
-/** 边框颜色(灰) */
-public var zyColorBorder2 = zyColorRGB(220,223,230)
-
-/** 边框浅灰 */
-public var zyColorBorder3 = zyColorRGB(235,238,245)
-
-/** 边框超浅灰 */
-public var zyColorBorder4 = zyColorRGB(242, 246, 252)
-
-/** 文字颜色1(系统白)*/
-public var zyColorText1 = UIColor.white
-
-/** 文字颜色2(深深灰) */
-public var zyColorText2 = zyColorRGB(48,49,51)
-
-/** 文字颜色3(深灰) */
-public var zyColorText3 = zyColorRGB(96,98,102)
-
-/** 文字颜色4(灰) */
-public var zyColorText4 = zyColorRGB(144,147,153)
-
-/** 文字颜色5(浅灰) */
-public var zyColorText5 = zyColorRGB(192,196,204)
-
-/** 文字颜色6(跟随系统主题色) */
-public var zyColorText6 = zyColorRGB(103,194,58)
-
-/** 背景颜色1(跟随系统) */
-public var zyColorBG1 = zyColorText6
-
-/** 背景颜色2(跟随系统浅) */
-public var zyColorBG2 = zyColorRGB(197,238,177)
-
-/** 背景颜色深灰 */
-public var zyColorBG3 = zyColorRGB(142, 144, 147)
-
-/** 背景颜色灰 */
-public var zyColorBG4 = zyColorRGB(229, 231, 236)
-
-/** 背景颜色浅灰 */
-public var zyColorBG5 = zyColorRGB(240, 240 , 240)
-
-/** 背景颜色超浅灰 */
-public var zyColorBG6 = zyColorRGB(246, 246, 246)
-
 // MARK: - 颜色相关
 
 /** 获取一个灰色的UIColor  参数:0-255 */
@@ -123,6 +64,9 @@ public let zyStatusBarH : CGFloat = zyScreenH >= 812 ? 40 : 20
 
 /// 底部安全高度
 public let zyBottomSafeH : CGFloat = zyScreenH >= 812.0 ? 34 : 0
+
+/// 顶部安全高度(含状态栏)
+public let zyTopSafeH : CGFloat = zyInchGT58 ? 44 : 20
 
 // MARK: - 常用CGRect
 public let zyTableRect = CGRect(x: 0, y: zyNavBarH, width: zyScreenW, height: zyScreenH - zyNavBarH)
