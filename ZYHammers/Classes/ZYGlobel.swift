@@ -18,7 +18,7 @@ public let zyScreenH = UIScreen.main.bounds.height
 /** 获取当前屏幕的bounds */
 public let zyBounds = CGRect(x: 0, y: 0, width: zyScreenW, height: zyScreenH)
 /** 获取除去标准导航高度的bounds */
-public let zyNavBounds = CGRect(x: 0, y: 0, width: zyScreenW, height: zyInchGT58 ? 88 : 64)
+public let zyNavBounds = CGRect(x: 0, y: 0, width: zyScreenW, height: zyInchGT5458 ? 88 : 64)
 
 // MARK: - 颜色相关
 
@@ -66,7 +66,7 @@ public let zyStatusBarH : CGFloat = zyScreenH >= 812 ? 40 : 20
 public let zyBottomSafeH : CGFloat = zyScreenH >= 812.0 ? 34 : 0
 
 /// 顶部安全高度(含状态栏)
-public let zyTopSafeH : CGFloat = zyInchGT58 ? 44 : 20
+public let zyTopSafeH : CGFloat = zyInchGT5458 ? 44 : 20
 
 // MARK: - 常用CGRect
 public let zyTableRect = CGRect(x: 0, y: zyNavBarH, width: zyScreenW, height: zyScreenH - zyNavBarH)
@@ -81,12 +81,16 @@ public let zyInch40 = UIScreen.main.bounds.height == 568.0
 public let zyInch47 = UIScreen.main.bounds.height == 667.0
 /** 是否是5.5英寸屏 414x736 */
 public let zyInch55 = UIScreen.main.bounds.height == 736.0
-/** 是否是5.8英寸屏 375x812 */
-public let zyInch58 = UIScreen.main.bounds.height == 812.0
-/** 是否是6.1或者6.5寸屏 414x896 */
+/** 是否是5.4或者5.8英寸屏 375x812 */
+public let zyInch5458 = UIScreen.main.bounds.height == 812.0
+/** 是否是6.1或者6.5寸屏 414x896(iPhone12以下) */
 public let zyInch6165 = UIScreen.main.bounds.height == 896.0
-/** 是否大于等于58寸 */
-public let zyInchGT58 = UIScreen.main.bounds.height >= 812.0
+/** 是否是6.1寸屏(iPhone12 12 pro) (height: 844) */
+public let zyInch61 = UIScreen.main.bounds.width == 390
+/** 是否是6.7英寸(iPhone12 pro max 428 * 926) */
+public let zyInch67 = UIScreen.main.bounds.width == 428
+/** 是否大于等于5.4或者5.8寸 */
+public let zyInchGT5458 = UIScreen.main.bounds.height >= 812.0
 
 // MARK: - KeyWindow
 public let zyKeyWindow = UIApplication.shared.keyWindow!

@@ -10,7 +10,6 @@
 		29597AAA254402C800019618 /* ZYProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29597AA9254402C800019618 /* ZYProtocols.swift */; };
 		29597AAD254407A900019618 /* ZYGlobel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29597AAC254407A900019618 /* ZYGlobel.swift */; };
 		2A8340542543144A00B75AE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8340532543144A00B75AE6 /* AppDelegate.swift */; };
-		2A8340562543144A00B75AE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8340552543144A00B75AE6 /* SceneDelegate.swift */; };
 		2A8340582543144A00B75AE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8340572543144A00B75AE6 /* ViewController.swift */; };
 		2A83405B2543144A00B75AE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A8340592543144A00B75AE6 /* Main.storyboard */; };
 		2A83405D2543144C00B75AE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A83405C2543144C00B75AE6 /* Assets.xcassets */; };
@@ -23,7 +22,6 @@
 		29597AAC254407A900019618 /* ZYGlobel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYGlobel.swift; sourceTree = "<group>"; };
 		2A8340502543144A00B75AE6 /* ZYHammers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYHammers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8340532543144A00B75AE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2A8340552543144A00B75AE6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2A8340572543144A00B75AE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2A83405A2543144A00B75AE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A83405C2543144C00B75AE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 			children = (
 				2A834069254318B500B75AE6 /* Classes */,
 				2A8340532543144A00B75AE6 /* AppDelegate.swift */,
-				2A8340552543144A00B75AE6 /* SceneDelegate.swift */,
 				2A8340572543144A00B75AE6 /* ViewController.swift */,
 				2A8340592543144A00B75AE6 /* Main.storyboard */,
 				2A83405C2543144C00B75AE6 /* Assets.xcassets */,
@@ -159,7 +156,6 @@
 				2A83406D254318DF00B75AE6 /* ZYStructs.swift in Sources */,
 				29597AAA254402C800019618 /* ZYProtocols.swift in Sources */,
 				2A8340542543144A00B75AE6 /* AppDelegate.swift in Sources */,
-				2A8340562543144A00B75AE6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
