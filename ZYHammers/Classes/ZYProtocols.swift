@@ -43,6 +43,34 @@ public extension ZYTabBarable where Self : UITabBarController {
         self.addChild(controller)
     }
     
+    /// 增加一个中间的plus按钮
+    func addPlusChildVC(_ controller : UIViewController,
+                               _ norIcon : String,
+                               _ selIcon : String) {
+        controller.tabBarItem.image = UIImage(named: norIcon)?.withRenderingMode(.alwaysOriginal)
+        controller.tabBarItem.selectedImage = UIImage(named: selIcon)?.withRenderingMode(.alwaysOriginal)
+        controller.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+    }
+    
+    /// 更新tabBarItem的文字标题，图片(可选)
+    func updateTabBarItem(_ controller : UIViewController,
+                          _ title : String,
+                          _ norImage : UIImage?,
+                          _ selImage : UIImage?) {
+        controller.tabBarItem.title = title
+        if norImage != nil {
+            controller.tabBarItem.image = norImage
+        }
+        if selImage != nil {
+            controller.tabBarItem.image = selImage
+        }
+    }
+    
+    /// 更新tabBar的背景图
+    func updateTabBarBackground(_ image : UIImage) {
+        tabBar.backgroundImage = image
+    }
+    
 }
 
 

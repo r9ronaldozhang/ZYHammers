@@ -21,7 +21,7 @@ public struct ZYError : LocalizedError {
         return desc
     }
     
-    init(_ desc : String) {
+    public init(_ desc : String) {
         self.desc = desc
     }
 }
