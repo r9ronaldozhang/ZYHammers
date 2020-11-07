@@ -519,3 +519,18 @@ public struct ZYSysAuth {
     }
     
 }
+
+// MARK: - UI 控件
+
+public struct ZYImage {
+    
+    /// 将一个UIImage对象，重绘成为一个指定的尺寸
+    public static func resize(_ image : UIImage, to size : CGSize) -> UIImage? {
+        UIGraphicsBeginImageContext(size);
+        image.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+    
+}

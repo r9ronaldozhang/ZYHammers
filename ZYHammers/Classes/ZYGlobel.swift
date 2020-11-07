@@ -32,6 +32,31 @@ public func zyColorRGB(_ r : CGFloat, _ g : CGFloat, _ b : CGFloat, _ alpha : CG
     return UIColor(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: alpha)
 }
 
+/** 根据16进制颜色，获取一个UIColor */
+public func zyColorHex(_ hex : String, _ alpha : CGFloat = 1) -> UIColor {
+    var color = UIColor.red
+    let cStr : String = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
+    var nStr = cStr as NSString
+    if nStr.hasPrefix("#") {
+        nStr = nStr.substring(from: 1) as NSString
+    }
+    
+    if nStr.length != 6 {
+        print("extension UIColor 使用有误，传入参数长度需要检查，默认返回 black")
+        return UIColor.black
+    }
+    let rStr = nStr.substring(to: 2)
+    let gStr = nStr.substring(with: NSMakeRange(2, 2))
+    let bStr = nStr.substring(with: NSMakeRange(4, 2))
+    
+    var r:CUnsignedInt = 0, g:CUnsignedInt = 0, b:CUnsignedInt = 0;
+    Scanner(string: rStr).scanHexInt32(&r)
+    Scanner(string: gStr).scanHexInt32(&g)
+    Scanner(string: bStr).scanHexInt32(&b)
+    color = UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: alpha)
+    return color
+}
+
 /** 获取一个随机色 */
 public var zyRandomColor : UIColor {
     let r = CGFloat(arc4random() % 255)
