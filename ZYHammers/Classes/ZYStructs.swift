@@ -155,6 +155,10 @@ public struct ZYSystemInfo {
         if platform == "iPhone12,1" { return "iPhone 11"}
         if platform == "iPhone12,3" { return "iPhone 11 Pro"}
         if platform == "iPhone12,5" { return "iPhone 11 Pro Max"}
+        if platform == "iPhone13,1" { return "iPhone 12 Mini"}
+        if platform == "iPhone13,2" { return "iPhone 12 "}
+        if platform == "iPhone13,3" { return "iPhone 12 Pro"}
+        if platform == "iPhone13,4" { return "iPhone 12 Pro Max"}
         
         if platform == "iPod1,1" { return "iPod Touch 1G"}
         if platform == "iPod2,1" { return "iPod Touch 2G"}
