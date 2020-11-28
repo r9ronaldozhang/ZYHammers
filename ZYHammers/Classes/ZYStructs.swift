@@ -197,6 +197,36 @@ public struct ZYSystemInfo {
         if platform == "iPad6,4" { return "iPad Pro 9.7"}
         if platform == "iPad6,7" { return "iPad Pro 12.9"}
         if platform == "iPad6,8" { return "iPad Pro 12.9"}
+        if platform == "iPad6,11" { return "iPad 5"}
+        if platform == "iPad6,12" { return "iPad 5"}
+        if platform == "iPad7,1" { return "iPad Pro 2代 12.9英寸"}
+        if platform == "iPad7,2" { return "iPad Pro 2代 12.9英寸"}
+        if platform == "iPad7,3" { return "iPad Pro 10.5英寸"}
+        if platform == "iPad7,4" { return "iPad Pro 10.5英寸"}
+        if platform == "iPad7,5" { return "iPad 6"}
+        if platform == "iPad7,6" { return "iPad 6"}
+        if platform == "iPad7,11" { return "iPad 7"}
+        if platform == "iPad7,12" { return "iPad 7"}
+        if platform == "iPad8,1" { return "iPad Pro 11英寸"}
+        if platform == "iPad8,2" { return "iPad Pro 11英寸"}
+        if platform == "iPad8,3" { return "iPad Pro 11英寸"}
+        if platform == "iPad8,4" { return "iPad Pro 11英寸"}
+        if platform == "iPad8,5" { return "iPad Pro 3代 12.9英寸"}
+        if platform == "iPad8,6" { return "iPad Pro 3代 12.9英寸"}
+        if platform == "iPad8,7" { return "iPad Pro 3代 12.9英寸"}
+        if platform == "iPad8,8" { return "iPad Pro 3代 12.9英寸"}
+        if platform == "iPad8,9" { return "iPad Pro 2代 11英寸"}
+        if platform == "iPad8,10" { return "iPad Pro 2代 11英寸"}
+        if platform == "iPad8,11" { return "iPad Pro 4代 12.9英寸"}
+        if platform == "iPad8,12" { return "iPad Pro 4代 12.9英寸"}
+        if platform == "iPad11,1" { return "iPad Mini 5"}
+        if platform == "iPad11,2" { return "iPad Mini 5"}
+        if platform == "iPad11,3" { return "iPad Air 3"}
+        if platform == "iPad11,4" { return "iPad Air 3"}
+        if platform == "iPad11,6" { return "iPad 8"}
+        if platform == "iPad11,7" { return "iPad 8"}
+        if platform == "iPad13,1" { return "iPad Air 4"}
+        if platform == "iPad13,2" { return "iPad Air 4"}
         
         if platform == "AppleTV2,1" { return "Apple TV 2"}
         if platform == "AppleTV3,1" { return "Apple TV 3"}
