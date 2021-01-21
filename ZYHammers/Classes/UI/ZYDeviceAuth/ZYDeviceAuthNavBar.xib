@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" interfaceStyle="light" id="iN0-l3-epB" customClass="ZYDeviceAuthNavBar" customModule="ZYHammers" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYc-7U-uq9">
+                    <rect key="frame" x="88" y="0.0" width="199.5" height="64"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大竹观察" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUA-HB-nei">
+                            <rect key="frame" x="20" y="24.5" width="69.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用权限说明" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pux-xl-CH6">
+                            <rect key="frame" x="95.5" y="26" width="92" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="18" id="Krv-6d-zKH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="pux-xl-CH6" secondAttribute="bottom" constant="20" id="Cgx-c8-30W"/>
+                        <constraint firstAttribute="trailing" secondItem="pux-xl-CH6" secondAttribute="trailing" constant="12" id="RsP-gW-VZm"/>
+                        <constraint firstItem="pux-xl-CH6" firstAttribute="leading" secondItem="YUA-HB-nei" secondAttribute="trailing" constant="6" id="Xya-3P-i6R"/>
+                        <constraint firstItem="YUA-HB-nei" firstAttribute="leading" secondItem="ZYc-7U-uq9" secondAttribute="leading" constant="20" id="o77-A2-7S0"/>
+                        <constraint firstItem="pux-xl-CH6" firstAttribute="centerY" secondItem="YUA-HB-nei" secondAttribute="centerY" id="tEP-32-LJo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ZYc-7U-uq9" secondAttribute="bottom" id="FrD-Q8-XSe"/>
+                <constraint firstItem="ZYc-7U-uq9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hu1-6u-ghf"/>
+                <constraint firstItem="ZYc-7U-uq9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mYZ-LO-XkR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="appNameL" destination="YUA-HB-nei" id="Slb-tm-WqW"/>
+                <outlet property="descL" destination="pux-xl-CH6" id="5nG-Yc-Bt7"/>
+            </connections>
+            <point key="canvasLocation" x="138" y="80"/>
+        </view>
+    </objects>
+</document>

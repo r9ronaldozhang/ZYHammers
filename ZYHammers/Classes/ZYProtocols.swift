@@ -94,3 +94,17 @@ public extension ZYAppCloseable {
     }
     
 }
+
+
+public protocol ZYTextFieldable { }
+
+public extension ZYTextFieldable where Self : UITextField {
+    
+    /// 设置指定颜色的placeholder
+    func setColorPlaceHolder(_ color : UIColor, _ content : String) {
+        let attr = [NSAttributedString.Key.foregroundColor : color]
+        let attrString = NSAttributedString(string: content, attributes: attr)
+        self.attributedPlaceholder = attrString
+    }
+    
+}

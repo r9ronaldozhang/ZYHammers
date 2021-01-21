@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		292855972564D20700C1FD9E /* ZYDeviceAuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292855962564D20700C1FD9E /* ZYDeviceAuthVC.swift */; };
+		2928559B2564EBF300C1FD9E /* ZYDeviceAuthM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2928559A2564EBF300C1FD9E /* ZYDeviceAuthM.swift */; };
+		2928559E2564F73400C1FD9E /* ZYDeviceAuthItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2928559D2564F73400C1FD9E /* ZYDeviceAuthItem.swift */; };
 		29597AAA254402C800019618 /* ZYProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29597AA9254402C800019618 /* ZYProtocols.swift */; };
 		29597AAD254407A900019618 /* ZYGlobel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29597AAC254407A900019618 /* ZYGlobel.swift */; };
+		296CB79825B5360B0053924B /* ZYDeviceAuthNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296CB79725B5360B0053924B /* ZYDeviceAuthNavBar.swift */; };
+		296CB79B25B5361E0053924B /* ZYDeviceAuthNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 296CB79A25B5361E0053924B /* ZYDeviceAuthNavBar.xib */; };
+		296CB79E25B53C880053924B /* ZYDeviceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296CB79D25B53C880053924B /* ZYDeviceConfig.swift */; };
+		296CB7A325B55EDE0053924B /* ZYDeviceAuthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296CB7A125B55EDE0053924B /* ZYDeviceAuthCell.swift */; };
+		296CB7A425B55EDE0053924B /* ZYDeviceAuthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 296CB7A225B55EDE0053924B /* ZYDeviceAuthCell.xib */; };
 		2A8340542543144A00B75AE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8340532543144A00B75AE6 /* AppDelegate.swift */; };
 		2A8340582543144A00B75AE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8340572543144A00B75AE6 /* ViewController.swift */; };
 		2A83405B2543144A00B75AE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A8340592543144A00B75AE6 /* Main.storyboard */; };
@@ -18,8 +26,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		292855962564D20700C1FD9E /* ZYDeviceAuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYDeviceAuthVC.swift; sourceTree = "<group>"; };
+		2928559A2564EBF300C1FD9E /* ZYDeviceAuthM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYDeviceAuthM.swift; sourceTree = "<group>"; };
+		2928559D2564F73400C1FD9E /* ZYDeviceAuthItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYDeviceAuthItem.swift; sourceTree = "<group>"; };
 		29597AA9254402C800019618 /* ZYProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYProtocols.swift; sourceTree = "<group>"; };
 		29597AAC254407A900019618 /* ZYGlobel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYGlobel.swift; sourceTree = "<group>"; };
+		296CB79725B5360B0053924B /* ZYDeviceAuthNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYDeviceAuthNavBar.swift; sourceTree = "<group>"; };
+		296CB79A25B5361E0053924B /* ZYDeviceAuthNavBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZYDeviceAuthNavBar.xib; sourceTree = "<group>"; };
+		296CB79D25B53C880053924B /* ZYDeviceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYDeviceConfig.swift; sourceTree = "<group>"; };
+		296CB7A125B55EDE0053924B /* ZYDeviceAuthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYDeviceAuthCell.swift; sourceTree = "<group>"; };
+		296CB7A225B55EDE0053924B /* ZYDeviceAuthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZYDeviceAuthCell.xib; sourceTree = "<group>"; };
 		2A8340502543144A00B75AE6 /* ZYHammers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYHammers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8340532543144A00B75AE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A8340572543144A00B75AE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +57,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		292855942564D0C100C1FD9E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				292855952564D0D800C1FD9E /* ZYDeviceAuth */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		292855952564D0D800C1FD9E /* ZYDeviceAuth */ = {
+			isa = PBXGroup;
+			children = (
+				296CB7A025B55E8A0053924B /* icons */,
+				292855962564D20700C1FD9E /* ZYDeviceAuthVC.swift */,
+				2928559A2564EBF300C1FD9E /* ZYDeviceAuthM.swift */,
+				2928559D2564F73400C1FD9E /* ZYDeviceAuthItem.swift */,
+				296CB79725B5360B0053924B /* ZYDeviceAuthNavBar.swift */,
+				296CB79A25B5361E0053924B /* ZYDeviceAuthNavBar.xib */,
+				296CB79D25B53C880053924B /* ZYDeviceConfig.swift */,
+				296CB7A125B55EDE0053924B /* ZYDeviceAuthCell.swift */,
+				296CB7A225B55EDE0053924B /* ZYDeviceAuthCell.xib */,
+			);
+			path = ZYDeviceAuth;
+			sourceTree = "<group>";
+		};
+		296CB7A025B55E8A0053924B /* icons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
 		2A8340472543144A00B75AE6 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +121,7 @@
 		2A834069254318B500B75AE6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				292855942564D0C100C1FD9E /* UI */,
 				2A83406C254318DE00B75AE6 /* ZYStructs.swift */,
 				29597AA9254402C800019618 /* ZYProtocols.swift */,
 				29597AAC254407A900019618 /* ZYGlobel.swift */,
@@ -138,8 +186,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				296CB7A425B55EDE0053924B /* ZYDeviceAuthCell.xib in Resources */,
 				2A8340602543144C00B75AE6 /* LaunchScreen.storyboard in Resources */,
 				2A83405D2543144C00B75AE6 /* Assets.xcassets in Resources */,
+				296CB79B25B5361E0053924B /* ZYDeviceAuthNavBar.xib in Resources */,
 				2A83405B2543144A00B75AE6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,9 +202,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A8340582543144A00B75AE6 /* ViewController.swift in Sources */,
+				292855972564D20700C1FD9E /* ZYDeviceAuthVC.swift in Sources */,
+				296CB79E25B53C880053924B /* ZYDeviceConfig.swift in Sources */,
+				2928559B2564EBF300C1FD9E /* ZYDeviceAuthM.swift in Sources */,
 				29597AAD254407A900019618 /* ZYGlobel.swift in Sources */,
 				2A83406D254318DF00B75AE6 /* ZYStructs.swift in Sources */,
+				2928559E2564F73400C1FD9E /* ZYDeviceAuthItem.swift in Sources */,
 				29597AAA254402C800019618 /* ZYProtocols.swift in Sources */,
+				296CB79825B5360B0053924B /* ZYDeviceAuthNavBar.swift in Sources */,
+				296CB7A325B55EDE0053924B /* ZYDeviceAuthCell.swift in Sources */,
 				2A8340542543144A00B75AE6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
